@@ -29,14 +29,14 @@
 $bl: #000
 $dark: #292930
 $bg-dark: #27272E
-$purple: #5956E9
+$purple: #004AFF
 $gray: #999FAE
 $gray-dark: #525260
 $gray-light: #ECF2F6
 $white: #fff
 $blue: #2522BA
-$pink: #FAB8C4
-$yellow: #FFDC60
+$pink: #FFFA32
+$yellow: #96DDFF
 $red: #C75C6F
 $green: #A4B16E
 
@@ -466,21 +466,21 @@ body
 .title
   position: relative
   +fd
-  font-size: 80px 
+  font-size: 65px 
   font-weight: 500 
   line-height: 1
   letter-spacing: -.025em
   +d
-    font-size: 68px
-  +m
     font-size: 48px
+  +m
+    font-size: 38px
   &__line
     position: relative
     &:before
       content: ""
       position: absolute 
-      left: calc(100% + 10px)
-      bottom: 30px
+      left: 0
+      bottom: 0px
       width: 72px
       height: 8px
       background: $purple 
@@ -491,12 +491,14 @@ body
         height: 5px
   &__box
     display: block
-    overflow: hidden
+    // overflow: hidden
   &__text
     display: block
     opacity: 0
     transform: translateY(110%)
     transition: transform .4s, opacity .4s 
+    font-weight: 800
+    
   &__color
     color: $purple 
   &_sm
@@ -508,11 +510,11 @@ body
     +m
       font-size: 32px
   &_big
-    font-size: 96px
+    font-size: 50px
     +d
-      font-size: 96px
+      font-size: 50px
     +m
-      font-size: 60px
+      font-size: 40px
   &[data-aos]
     .title__box:nth-child(2) .title__text
       transition-delay: .2s 
@@ -716,7 +718,7 @@ body
       left: calc(50% - 620px)
       width: 48px
       height: 48px
-      background: $pink   
+      background: $yellow
     &:nth-child(3)
       left: 46%
       top: 229px
@@ -749,7 +751,7 @@ body
       z-index: 2
       width: 180px
       height: 180px
-      background: $pink
+      background: $yellow
       +d
         right: calc(50% - 250px) 
         bottom: -70px
@@ -797,6 +799,8 @@ body
   color: $white
   +m
     padding: 80px 0
+  .slick-slide
+    height: inherit !important
   &__center
     position: relative
     z-index: 2
@@ -989,7 +993,8 @@ body
     color: rgba($white, .3)  
   .slick-arrow
     position: absolute
-    bottom: 6px
+    top: auto
+    bottom: 0px
     width: 40px
     height: 40px
     border-radius: 50%
@@ -1002,6 +1007,7 @@ body
     .icon
       font-size: 12px
       fill: $white
+      height: inherit
     &:hover
       background: $purple
       border-color: $purple  
@@ -1284,7 +1290,7 @@ body
 .layouts
   position: relative
   padding: 231px 0 165px
-  background: $white 
+  // background: $white 
   +d
     padding: 216px 0 126px
   +t
@@ -1769,7 +1775,7 @@ body
       padding: 40px 
     +m
       padding: 24px    
-    &:first-child
+    &.active
       background: $purple
       color: $white 
       .plan__price
@@ -1780,10 +1786,10 @@ body
         color: $white 
         &:before
           background-image: url('../img-2/list-icon-1.svg') 
-    &:nth-child(2)
-      background: $white 
-      box-shadow: 0 20px 40px rgba($dark, .05) 
-    &:nth-child(3)
+    // &:nth-child(1)
+    //   background: $white 
+    //   box-shadow: 0 20px 40px rgba($dark, .05) 
+    &:nth-child(3), &:nth-child(1)
       border: 1px solid #E3E6E9 
     +nf
       display: none
@@ -1880,7 +1886,7 @@ body
   height: 923px
   margin-bottom: 239px
   padding: 148px 0 0 
-  background: $pink 
+  background: $yellow
   +d
     margin-bottom: 190px
   +t
@@ -1895,7 +1901,7 @@ body
     margin-bottom: 117px
   &__stage
     margin-bottom: 16px
-    color: $red
+    color: $purple
   &__title
     font-size: 144px
     font-weight: 700
@@ -1907,10 +1913,13 @@ body
     .title__color
       color: #3A38BF
   &__details
+    text-align: center
     position: absolute
     right: calc(50% - 520px) 
     bottom: -170px
     z-index: 4
+    // display: grid
+    // place-items: center
     display: flex
     flex-direction: column
     justify-content: center
@@ -1918,7 +1927,7 @@ body
     width: 505px
     height: 505px
     margin-left: auto
-    padding: 0 90px 35px 95px 
+    padding: 0 110px 35px 110px 
     border-radius: 50% 
     background: $purple
     +t
@@ -1929,7 +1938,7 @@ body
     +m
       right: 50%
       bottom: -196px
-      display: inline-block
+      // display: inline-block
       width: 505px
       height: 505px 
       margin-right: -252px 
@@ -1961,10 +1970,18 @@ body
       margin-bottom: 32px
       font-size: 18px
   &__link
+    width: 230px
+    text-align: center
+    height: 72px
     position: relative
-    display: inline-block
+    display: inline-grid
+    justify-content: center
+    align-items: center
+    border-radius: 20px
+    margin: 30px auto 0
     font-weight: 500 
-    color: rgba($white, .5) 
+    background-color: #fff
+    color: $purple
     transition: all .25s
     +m
       display: inline-flex
@@ -1988,13 +2005,14 @@ body
       +m
         display: none 
     &:hover
-      padding-left: 50px
-      color: $white 
-      +m
-        padding: 0
-        color: $dark 
-      &:before
-        width: 34px
+      background-color: rgba($color: #fff, $alpha: 0.9)
+      // padding-left: 50px
+      // color: $white 
+      // +m
+      //   padding: 0
+      //   color: $dark 
+      // &:before
+      //   width: 34px
   &__pic
     width: 100% 
   &__icon &__pic
@@ -2147,8 +2165,8 @@ body
         transform: translate(0,0) rotate(0)
         opacity: 1
   &__cursor
-    top: 55%
-    left: calc(50% - 89px)
+    top: 104%
+    left: calc(82% - 89px)
     z-index: 5
     width: 135px
     +t
@@ -2182,7 +2200,7 @@ body
       margin-bottom: 112px
   &__stage
     margin-bottom: 24px
-    color: $red 
+    color: $purple
   &__body
     display: flex
     +m
@@ -2281,7 +2299,7 @@ body
     width: 88px
     height: 88px
     border-radius: 50%
-    background: $pink 
+    background: $yellow
     +m
       top: -90px
       left: 27px
@@ -2293,11 +2311,11 @@ body
       padding-right: 100px  
   .slick-arrow
     position: absolute
-    top: 118px
+    top: 208px
     width: 40px
     height: 40px
     border-radius: 50%
-    background: $pink 
+    background: $purple 
     font-size: 0
     transition: all .25s 
     +m
@@ -2305,8 +2323,9 @@ body
     .icon
       font-size: 12px
       fill: $white
+      height: inherit
     &:hover
-      background: $purple
+      background: $yellow
   .slick-prev
     left: -340px
     +t
@@ -3998,7 +4017,7 @@ body
       padding: 0
   &__stage
     margin-bottom: 24px
-    color: $red
+    color: $purple
     +m
       margin-bottom: 16px
   &__top
@@ -4171,19 +4190,19 @@ body
       transform: translateX(3px)
   &__circle
     border-radius: 50%
-    &:first-child
-      top: -74px
-      right: calc(50% - 577px) 
-      width: 148px
-      height: 148px
-      background: $purple 
-      +d
-        right: 204px
-      +m
-        top: 430px
-        right: 38px
-        width: 38px
-        height: 38px
+    // &:first-child
+    //   top: -74px
+    //   right: calc(50% - 577px) 
+    //   width: 148px
+    //   height: 148px
+    //   background: $purple 
+    //   +d
+    //     right: 204px
+    //   +m
+    //     top: 430px
+    //     right: 38px
+    //     width: 38px
+    //     height: 38px
     &:nth-child(2)
       top: 356px
       right: calc(50% - 618px) 
@@ -4199,7 +4218,7 @@ body
     
 .showcase
   position: relative
-  height: 1963px
+  height: 924px
   margin-bottom: 100px
   padding-top: 112px
   overflow: hidden
@@ -4265,7 +4284,7 @@ body
       left: calc(50% - 814px)
       width: 191px
       height: 191px
-      background: $pink 
+      background: $yellow
     &:nth-child(2)
       top: 642px
       left: calc(50% - 560px)
@@ -4484,6 +4503,8 @@ body
 .footer
   &__row
     display: flex
+    flex-wrap: wrap
+    justify-content: space-between
     margin-right: -40px
     margin-bottom: 73px
     +t
@@ -4492,13 +4513,14 @@ body
       display: block
       margin: 0 0 32px
   &__col
-    flex: 0 0 25%
+    flex: 0 0 auto
     padding-right: 30px
     +m
       width: 100%
       margin-bottom: 32px
       padding: 0 
     &:first-child
+      margin-right: auto
       +m
         margin-bottom: 56px
         text-align: center
@@ -4506,6 +4528,8 @@ body
       padding-top: 8px
       +m
         padding: 0
+    &:last-child
+      margin-right: auto
   &__logo
     display: inline-block
     font-size: 0
@@ -4545,7 +4569,7 @@ body
       display: none
       padding-top: 24px
   &__link
-    color: $dark
+    color: $gray
     transition: color .25s
     +m
       display: block

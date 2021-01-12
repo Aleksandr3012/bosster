@@ -458,3 +458,14 @@ iframe {
 		display: none
 	}
 }
+
+.title__loginRight {
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 10vh;
+	}
+}
+
+
+.slick-slide {
+	height: inherit;
+}

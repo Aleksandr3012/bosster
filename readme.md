@@ -1,4 +1,3 @@
-1. Отключил lazy плагин. Поставил  loading="lazy"
-
-
-rm -rf node_modules
+1. <https://aleksandr3012.github.io/afon/public/>
+1. <https://aleksandr3012.github.io/afon/public/login.html>
+1. <https://aleksandr3012.github.io/afon/public/sign-up.html>

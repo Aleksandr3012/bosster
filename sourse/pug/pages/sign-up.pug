@@ -1,0 +1,63 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Sign Up'
+	title= title
+block pagecontent
+
+	.entry.entry_solo
+		.entry__center.center
+			.entry__head
+				a.entry__logo(href="index.html")
+					img.entry__pic.entry__pic_white(src="img-2/logo-white-new.svg" alt="")
+					img.entry__pic.entry__pic_black(src="img-2/logo-new.svg" alt="")
+				a.entry__link(href="#") Не зарегистрированы?
+				button.entry__btn.btn.btn_purple Зарегистрироваться
+			.entry__body
+				.entry__row
+					.entry__details
+						.entry__title.title.title_sm Данные конкурентов – ваше оружие
+						//- .entry__info Create your own website with the Fastest Page Building Platform.
+						.entry__img
+							img.entry__pic(src="img-2/entry-pic-2-new.png" alt="")
+					form.entry__form
+						.entry__title.title.title__loginRight Станьте частью сообщества
+						.entry__info 
+						.entry__field.field
+							.field__label Email
+							.field__wrap
+								.field__icon
+									img.field__pic(src="img-2/sending-mail.svg" alt="")
+								input.field__input(type="email" name="email" placeholder="Email")
+						.entry__field.field
+							.field__line
+								.field__label Пароль
+								a.field__link(href="#") Забыли пароль?
+							.field__wrap
+								.field__icon
+									img.field__pic(src="img-2/lock.svg" alt="")
+								input.field__input(type="password" name="password" placeholder="Пароль")
+						button.entry__btn.btn.btn_purple(type="submit") Зарегистрироваться
+						.entry__links
+							a.entry__link(href="#") Not a member? Sigup now
+			//- .entry__foot
+				a.entry__author(href="https://ui8.net/" target="_blank")
+					.entry__text A product by
+					.entry__icon
+						img.entry__pic(src="img-2/ui8.svg" alt="")
+		.entry__bg
+			img.entry__pic(src="img-2/entry-circle-new.svg" alt="")
+		.entry__cube
+			img.entry__pic(src="img-2/cube-new.png" alt="")
+		.entry__circles
+			.entry__circle
+			.entry__circle
+			.entry__circle
+			.entry__circle
+			.entry__circle
