@@ -28,7 +28,7 @@ body {
 	// min-width: 320px; 
 	-webkit-font-smoothing: antialiased;
 	position: relative;
-	overflow-x: hidden; 
+	// overflow-x: hidden; 
 	@include mt;
 
 	&.loaded_hiding {

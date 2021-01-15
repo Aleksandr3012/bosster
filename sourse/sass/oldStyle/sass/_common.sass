@@ -22,7 +22,7 @@
 
 
 =fd
-  font-family: 'DM Sans', sans-serif
+  font-family: 'Montserrat', sans-serif
 =f
   font-family: 'Poppins', sans-serif
 
@@ -217,6 +217,8 @@ body
   &__item
     +nl
       margin-right: 57px
+      +d
+        margin-right: 30px
       +m
         margin: 0 0 24px 
   &__item[href],
@@ -552,6 +554,8 @@ body
   +m
     padding: 170px 0 35px  
   &__wrap
+    position: relative
+    z-index: 10
     max-width: 440px
     +m
       max-width: 100% 
@@ -1912,9 +1916,11 @@ body
     font-weight: 700
     color: $white
     +d
-      font-size: 130px
+      font-size: 100px
     +m
-      font-size: 78px
+      font-size: 90px
+    +a
+      font-size: 44px
     .title__color
       color: #3A38BF
   &__details
@@ -1936,7 +1942,7 @@ body
     border-radius: 50% 
     background: $purple
     +t
-      right: -50px
+      right: -0px
       width: 450px
       height: 450px
       padding: 0 55px
@@ -1947,7 +1953,7 @@ body
       width: 505px
       height: 505px 
       margin-right: -252px 
-      padding: 48px 90px 0
+      padding: 0px 90px 0
       text-align: center
   &__icon
     display: inline-flex
@@ -1973,7 +1979,7 @@ body
     color: $white 
     +m
       margin-bottom: 32px
-      font-size: 18px
+      // font-size: 18px
   &__link
     width: 230px
     text-align: center
@@ -1997,7 +2003,7 @@ body
       height: 82px
       border-radius: 20px
       background: $pink
-      font-size: 16px
+      font-size: 18px
       color: $dark   
     &:before
       content: ""
@@ -2143,7 +2149,8 @@ body
         bottom: 60px
         width: 330px 
       +a
-        left: calc(50% - 260px)
+        bottom: 230px
+        // left: calc(50% - 260px)
       &[data-aos]
         transform: translate(-100px,100px) rotate(-30deg)
     &:nth-child(2)
@@ -2301,6 +2308,7 @@ body
   &__circle
     position: absolute
     top: 0
+    z-index: -1
     right: calc(50% - 638px)
     width: 88px
     height: 88px
@@ -3167,12 +3175,12 @@ body
   &__text
     color: $gray
     +d
-      max-width: 180px
+      // max-width: 180px
     +m
       max-width: 100% 
       font-size: 16px
     +a
-      max-width: 180px
+      // max-width: 180px
   &__link
     margin-top: auto
     display: inline-flex
@@ -4156,8 +4164,9 @@ body
         left: -33px
         width: 202px
         +m
+          top: -20px
           left: 50%
-          transform: translateX(-46%)
+          transform: translateX(-38%)
           width: 180px
     &:nth-child(4)
       .quality__icon
@@ -4242,16 +4251,16 @@ body
   +d
     margin-bottom: 40px
   +t
-    height: 1500px
+    height: 800px
     padding-top: 90px
   +m
-    height: 1115px
-    margin-bottom: 0 
-    padding-top: 72px
+    height: 653px
+    // margin-bottom: 0 
+    padding-top: 50px
   &__wrap
     position: relative
     z-index: 3
-    max-width: 500px
+    max-width: 540px
     +m
       max-width: 100%
       text-align: center 
@@ -4268,12 +4277,15 @@ body
     max-width: 410px
     margin-bottom: 45px
     +m
-      margin: 0
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 25px
+
   &__btn .btn
     min-width: 233px
     height: 82px
     +m
-      display: none
+      // display: none
   &__bg,
   &__circle,
   &__list
@@ -4312,12 +4324,17 @@ body
       +t
         top: 550px
   &__list
-    top: 454px
+    top: 850px
     left: 50%
-    transform: translateX(-35.6%) rotate(-30deg)
+    transform: translateX(-62%) rotate(-30deg)
     z-index: 2 
+    +d
+      top: 650px
     +m
-      top: 350px
+      top: 480px
+    +a
+      transform: translateX(-77%) rotate(-30deg)
+      top: 590px
   &__preview
     font-size: 0
     +m
