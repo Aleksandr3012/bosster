@@ -481,7 +481,7 @@ body
       content: ""
       position: absolute 
       left: 0
-      bottom: 0px
+      bottom: -30px
       width: 72px
       height: 8px
       background: $purple 
@@ -501,7 +501,7 @@ body
     font-weight: 800
     
   &__color
-    color: $purple 
+    color: $purple
   &_sm
     font-size: 40px
     letter-spacing: -.045em
@@ -556,7 +556,7 @@ body
     +m
       max-width: 100% 
   &__title
-    margin-bottom: 21px
+    margin-bottom: 55px
     +m
       max-width: 400px
       margin-bottom: 40px
@@ -567,7 +567,7 @@ body
       br
         display: block
   &__info
-    max-width: 320px
+    max-width: 400px
     margin-bottom: 40px
     +m
       max-width: 100%
@@ -1299,7 +1299,9 @@ body
   +m
     padding: 80px 0 25px 
   &__wrap
-    max-width: 450px
+    position: relative
+    z-index: 10
+    max-width: 550px
     +m
       max-width: 100% 
       margin-bottom: 90px
@@ -1337,7 +1339,7 @@ body
     width: 100%
   &__view
     position: absolute
-    top: 287px
+    top: 207px
     right: calc(50% - 717px)
     font-size: 0
     +d
@@ -1854,6 +1856,7 @@ body
     flex-grow: 1
     margin-bottom: 40px
     li
+      font-size: 14px
       position: relative
       padding-left: 36px
       color: $gray 
@@ -1866,7 +1869,7 @@ body
         height: 24px
         background: url('../img-2/list-icon-2.svg') no-repeat 0 0 / 100% auto  
       +nl
-        margin-bottom: 24px
+        margin-bottom: 14px
   &__btn
     font-weight: 500
     min-width: 100%
@@ -2938,9 +2941,11 @@ body
     
 .design
   position: relative
-  margin-bottom: 110px
+  padding-top: 260px
+  // margin-bottom: 110px
   +m
-    margin-bottom: 80px
+    padding-top: 130px
+    // margin-bottom: 80px
   &__wrap
     max-width: 495px
     margin-bottom: 108px
@@ -2975,7 +2980,7 @@ body
     font-size: 0
     pointer-events: none
   &__hand
-    top: -130px
+    top: 0px
     right: calc(50% - 775px)
     width: 620px
     +rmin(1540)
@@ -2983,7 +2988,7 @@ body
     +d
       right: calc(50% - 725px)
     +t
-      top: -100px
+      top: 0px
       right: -100px
       width: 400px
     +m
@@ -2996,9 +3001,9 @@ body
         transform: translateX(0) rotate(0)
         opacity: 1
   &__bg
-    top: -33px
-    right: calc(50% - 314px)
-    width: 290px 
+    top: 10px
+    right: calc(50% - 454px)
+    width: 466px 
     +d
       right: calc(50% - 260px)
     +t
@@ -3077,6 +3082,8 @@ body
     &.slick-initialized
       visibility: visible
   &__slide
+    height: auto
+    background: $yellow
     margin: 0 20px
     padding: 40px 10px 10px 
     border-radius: 24px 
@@ -3084,18 +3091,18 @@ body
       margin: 0 12px 
     &:first-child,
     &:nth-child(4)
-      background: #FFEDDC
+      // background: #FFEDDC
       .design__view
-        background: $pink 
+        // background: $pink 
       .design__preview
-        top: 10px
-        left: 15px
-        width: 360px
+        top: 30px
+        left: 40px
+        width: 290px
     &:nth-child(2),
     &:nth-child(5)
-      background: #DBDEFF
+      // background: #DBDEFF
       .design__view
-        background: $purple 
+        // background: $purple 
       .design__preview
         top: 52px
         left: 50%
@@ -3106,15 +3113,16 @@ body
         .icon
           fill: $purple
     &:nth-child(3)
-      background: #DBF8FF
+      // background: #DBF8FF
       .design__view
-        background: #90C8FC 
+        // background: #90C8FC 
       .design__preview
         top: 45px
         left: 50%
         transform: translateX(-51%)
         width: 150px
   &__view
+    background: $purple
     position: relative
     width: 220px
     height: 220px
@@ -3124,6 +3132,10 @@ body
     +m
       margin-bottom: 34px
   &__details
+    height: 100%
+    max-height: 355px
+    display: flex
+    flex-direction: column
     padding: 40px 30px
     background: $white
     border-radius: 24px
@@ -3162,6 +3174,7 @@ body
     +a
       max-width: 180px
   &__link
+    margin-top: auto
     display: inline-flex
     align-items: center
     margin-top: 26px
@@ -5149,3 +5162,6 @@ body
   &.aos-animate 
     transform: translateY(0)
     opacity: 1 
+
+.slick-arrow svg
+  height: inherit !important

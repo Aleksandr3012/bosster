@@ -17,7 +17,7 @@ block pagecontent
 				button.header__burger.js-header-burger
 					span
 				a.header__logo(href="#")
-					img.header__pic(src="img-2/logo-new.svg" alt="")
+					img.header__pic(src="img-2/logo-new-magnetx.svg" alt="")
 				.header__wrap.js-header-wrap
 					nav.header__nav
 						a.header__item(href="#") Возможности
@@ -95,8 +95,8 @@ block pagecontent
 			.main__wrap
 				h1.main__title.title.title_big(data-aos)
 					span.title__box
-						span.title__text <span class="title__line">Данные о конкурентах – ваше оружие.</span>
-				.main__info.info(data-aos="animation-scale-y" data-aos-delay="400") Увеличивайте продажи на Wildberries за счет умного мониторинга цен, ассортимента, промоакций и других данных конкурентов
+						span.title__text <span class="title__line">Увеличьте ваши продажи на <span class="title__color">WILDBERRIES</span> в 5 раз!</span>
+				.main__info.info(data-aos="animation-scale-y" data-aos-delay="400") Онлайн-платформа проанализирует механизм ваших продаж на&nbsp;Wildberries, составит новую стратегию, и&nbsp;вы&nbsp;уже сможете увеличить прибыль в&nbsp;разы всего за&nbsp;пару месяцев.
 				.main__control(data-aos="animation-scale-y" data-aos-delay="550")
 					a.main__btn.btn.btn_purple(href="login.html") Оставить заявку
 					a.main__link(href="#")
@@ -130,8 +130,9 @@ block pagecontent
 			.features__head(data-aos="animation-scale-y")
 				.features__stage.stage Возможности
 				.features__box
-					h2.features__title.title Платформа мониторинга ассортимента и цен конкурентов
-					.features__info.info Не тратьте время на ручную сверку товаров по конкурентам на Wildberries. Получайте сводную аналитику по ценам и параметрам товаров онлайн
+					h2.features__title.title Наша аналитика заставит ваш магазин работать эффективно
+					.features__info.info Найдите хиты продаж, избавьтесь от&nbsp;слабых товаров и&nbsp;эффективно управляйте ассортиментом с&nbsp;помощью автоматизации и&nbsp;аналитики
+
 			.features__body
 				.features__container
 					.features__slider.js-features-slider
@@ -139,15 +140,15 @@ block pagecontent
 							.features__details
 								.features__preview
 									img.features__pic(src="img-2/features-slide-1.png" alt="")
-								.features__category Анализ категорий
-								.features__text Увеличьте продажи, анализируя категории и ценовые параметры у конкурентов
+								.features__category Повысьте маржинальность
+								.features__text Оптимизация затрат на хранение, логистику и уменьшение оборотного капитала дает заработать больше с каждого вложенного рубля
 								//- a.features__link(href="#") Find out more
 						.features__slide(data-aos="animation-scale-y" data-aos-delay="200")
 							.features__details
 								.features__preview
 									img.features__pic(src="img-2/features-slide-2.png" alt="")
-								.features__category Анализ промо
-								.features__text Отслеживайте стоимость товаров конкурентов с учетом различных видов уценок и промо
+								.features__category Получите управляемость
+								.features__text Набор отчетов покажет: сколько, когда и куда везти; на чем вы зарабатываете, а на чем теряете, и что с этим делать
 								//- a.features__link(href="#") Find out more
 						.features__slide
 							.features__details
@@ -174,6 +175,43 @@ block pagecontent
 		.features__circle.js-rellax(data-rellax-speed="-.7")
 		.features__bg(data-aos data-aos-duration="1000")
 			img.features__pic(src="img-2/features-pic-1.svg" alt="")
+	.design
+		.design__center.center
+			.design__wrap(data-aos="animation-translate-y")
+				.design__stage.stage Возможности
+				h2.design__title.title Решаемые задачи для вашего бизнеса
+				.design__info.info Наш аналитический инструмент MagnetX поможет стабильно расти. Мы сами используем MagnetX и сделали его изначально для себя и знакомых.
+			.design__hand(data-aos data-aos-duration="600")
+				img.design__pic(src="img-2/hand-4-new.png" alt="")
+			.design__bg(data-aos data-aos-delay="400")
+				img.design__pic(src="img-2/design-pic-new.png" alt="")
+			.design__circles
+				.design__circle.js-rellax(data-rellax-speed="1")
+				.design__circle
+				.design__circle.js-rellax(data-rellax-speed=".5")
+			.design__body
+				a.design__scroll(href="#")
+					.design__icon
+						img.design__pic(src="img-2/scroll.svg" alt="")
+					.design__text Используйте MagnetX
+				.design__container
+					.design__slider.js-design-slider
+						mixin designSlide(src, category, info, text, delay)
+							.design__slide(data-aos="animation-translate-y" data-aos-delay=delay)
+								.design__view
+									.design__preview
+										img.design__pic(src=src alt="")
+								.design__details
+									//- .design__category=category
+									.design__info=info
+									.design__text=text
+									a.design__link(href="login.html") Попробовать
+										+i('arrow-right')
+						+designSlide('img-2/design-pic-1-new.png', 'Design', 'Сводка', 'В постоянно обновляющей сводке заказов, вы наглядно увидите самые продающиеся позиции', '0')
+						+designSlide('img-2/design-pic-2-new.png', 'Build', 'Прибыльность', 'Отчёт прибыльности позволит выяснить какие товары приносят максимальную прибыль, а из-за каких вы несете постоянные убытки ', '200')
+						+designSlide('img-2/design-pic-3-new.png', 'Ship', 'Допоставки', 'Самый значимый отчет, позволяющий увеличить прибыль. Система покажет, какие товары и в каком количество нужно поставлять на склады.', '400')
+						+designSlide('img-2/design-pic-1-new.png', 'Design', 'Скидки', 'С помощью простой таблицы вы можете указать скидку и промокод на каждый товар, а мы рассчитаем вашу прибыль, логистику и комиссию с каждого заказа.')
+						+designSlide('img-2/design-pic-2-new.png', 'Build', 'АВС АНАЛИЗ', 'АBС анализ поможет составить отчёт и определить 20% товаров, которые приносят 80% выручки. Тем самым, можно сосредоточить внимание на этих позициях и увеличить продажи топовых товаров в разы.')
 	//- .access
 		.access__center.center
 			.access__view(data-aos data-aos-delay="300")
@@ -213,21 +251,22 @@ block pagecontent
 			.layouts__wrap
 				.layouts__head(data-aos="animation-scale-y")
 					.layouts__stage.stage Выгоды
-					h2.layouts__title.title 3 выгоды в 1 решении<span class="title__color">.</span>
-				.layouts__info.info(data-aos="animation-scale-y") Наши клиенты увеличивают свои продажи на Wildberries до 30%
+					h2.layouts__title.title Аналитика продаж - ваше оружие
+				.layouts__info.info(data-aos="animation-scale-y") Наши клиенты увеличивают свои продажи на Wildberries от 30% в месяц
 				.layouts__list
 					.layouts__item(data-aos="animation-scale-y")
 						.layouts__icon
 							img.layouts__pic(src="img-2/layout-1-new.svg" alt="")
-						.layouts__text Вам доступен конкурентный анализ в&nbsp;режиме &laquo;день-в-день&raquo;.
+						.layouts__text Отчёты помогут выявить товары, нуждающиеся в оптимизации – делайте скидки, устраивайте распродажи, снимайте неликвидные позиции.
 					.layouts__item(data-aos="animation-scale-y")
 						.layouts__icon
 							img.layouts__pic(src="img-2/layout-2-new.svg" alt="")
-						.layouts__text Используйте конкурентное ценообразование для оптимизации цен и&nbsp;повышения продаж.
+						.layouts__text Вы можете проанализировать продукт по рейтингу и рентабельности, а также оценить его финансовые показатели.
 					.layouts__item(data-aos="animation-scale-y")
 						.layouts__icon
 							img.layouts__pic(src="img-2/layout-3-new.svg" alt="")
-						.layouts__text Ищите неизведанные новые ниши и&nbsp;возможности для развития
+						.layouts__text Теперь можно освободить время для значимых задач необходимых для бизнеса с помощью нас это можно сделать за 5 минут.
+
 			.layouts__view(data-aos)
 				.layouts__preview
 					img.layouts__pic(src="img-2/layouts-pic-1-new.png" alt="")
@@ -264,7 +303,7 @@ block pagecontent
 				.quality__top(data-aos="animation-scale-y")
 					.quality__stage.stage Как работает
 					h2.quality__title.title Настройка – 5 минут, без разработчика
-				.quality__info.info(data-aos="animation-scale-y" data-aos-delay="200") Уникальная механика мониторинга данных конкурентов на Wildberries
+				.quality__info.info(data-aos="animation-scale-y" data-aos-delay="200") Увеличьте свои продажи на Wildberries
 			.quality__line
 				img.quality__pic(src="img-2/line-3-new.svg" alt="")
 			.quality__preview
@@ -275,8 +314,8 @@ block pagecontent
 					.quality__icon
 						img.quality__pic(src="img-2/camera-big-new.png" alt="")
 					.quality__details
-						.quality__category Мониторинг <br>Wildberries
-						.quality__text Наши роботы собирает ежедневные данные с Wildberries и предоставляют данные в графиках и таблицах.
+						.quality__category Подключение
+						.quality__text Подключите по API #[strong без доступа в личный кабинет.] Не нужно загружать отчеты, давать доступ к кабинету
 						//- a.quality__link(href="#") Learn more
 						//- 	+i('arrow-right')
 			.quality__col
@@ -284,8 +323,8 @@ block pagecontent
 					.quality__icon
 						img.quality__pic(src="img-2/clock-big-new.png" alt="")
 					.quality__details
-						.quality__category Выбор задачи
-						.quality__text В веб-кабинете пользователь назначает задание на мониторинг с описанием товара или бренда.
+						.quality__category Безопасность
+						.quality__text Все данные поступают напрямую по API и хранятся #[strong в зашифрованом виде] и видны только вам
 						//- a.quality__link(href="#") Learn more
 						//- 	+i('arrow-right')
 			.quality__col
@@ -293,8 +332,8 @@ block pagecontent
 					.quality__icon
 						img.quality__pic(src="img-2/popups.png" alt="")
 					.quality__details
-						.quality__category Классификация
-						.quality__text Каждый продукт, попадающий в Бустер, распознается по 30 признакам сопоставления или классифицируется по вашим рыночным категориям.
+						.quality__category Анализ
+						.quality__text Анализируйте данные #[strong с минимальной задержкой] и принимайте взвешенные решения на основе данных
 						//- a.quality__link(href="#") Learn more
 						//- 	+i('arrow-right')
 			.quality__col
@@ -302,8 +341,8 @@ block pagecontent
 					.quality__icon
 						img.quality__pic(src="img-2/chatbox-big-new.png" alt="")
 					.quality__details
-						.quality__category Передача информации
-						.quality__text Предоставляем доступ в веб-кабинет для просмотра и проверки данных и отправляем необходимые выгрузки по расписанию.
+						.quality__category Результат
+						.quality__text Более 70 брендов работают через наш сервис и #[strong смогли увеличить свои продажи] в разы
 						//- a.quality__link(href="#") Learn more
 							+i('arrow-right')
 		.quality__circles
@@ -317,7 +356,7 @@ block pagecontent
 			.work__details(data-aos="animation-translate-y" data-aos-duration="800")
 				//- .work__icon
 					img.work__pic(src="img-2/balls.svg" alt="")
-				.work__text Начните получать оперативную, полную и достоверную информацию о рынке
+				.work__text Начните получать оперативную, полную и достоверную информацию 
 				a.work__link(href="#") Оставить заявку
 		.work__hands
 			.work__hand(data-aos data-aos-duration="800" data-aos-offset="0")
@@ -342,7 +381,7 @@ block pagecontent
 				.plan__stage.stage Начните увеличивать продажи
 				h2.plan__title.title Подберите <span class="title__color">свой</span> тариф.
 				.plan__info.info Доступные тарифные планы
-				label.switch
+				//- label.switch
 					input.switch__input(type="checkbox" checked)
 					span.switch__flex
 						span.switch__yearly Годовая подписка
@@ -364,9 +403,11 @@ block pagecontent
 					h3.plan__title.title.title_sm Базовый
 					.plan__price <span class="plan__money">₽4990</span> /месяц
 					ul.plan__list
-						li Анализ бренда
-						li Анализ конкурентов
-						li Анализ рыночной<br>ситуации в&nbsp;вашей<br>категории
+						li Аналитика заказов, продаж и чистой прибыли
+						li Планирование поставок на основные и региональные склады.
+						li Расчет % выкупа и стоимости логистики по товару/размеру
+						li Расчет чистой прибыли и маржинальности по товару
+						li и другие инструменты
 					a.plan__btn.btn.btn_purple.js-popup-open(href="#popup-contact" data-effect="mfp-zoom-in") Попробовать
 				.plan__item.js-plan-item.active(data-aos="animation-translate-y" data-aos-delay="200")
 					.plan__star
@@ -378,9 +419,11 @@ block pagecontent
 					h3.plan__title.title.title_sm Бизнес
 					.plan__price <span class="plan__money">₽14990</span> /месяц
 					ul.plan__list
-						li Все из тарифа “Базовый”
-						li Анализ новинок<br>конкурентов
-						li Анализ потенциала и упущенной выгоды по товарам
+						li Аналитика заказов, продаж и чистой прибыли
+						li Планирование поставок на основные и региональные склады.
+						li Расчет % выкупа и стоимости логистики по товару/размеру
+						li Расчет чистой прибыли и маржинальности по товару
+						li и другие инструменты
 					a.plan__btn.btn.btn_pink.js-popup-open(href="#popup-contact" data-effect="mfp-zoom-in") Попробовать
 				.plan__item.js-plan-item(data-aos="animation-translate-y" data-aos-delay="400")
 					//- .plan__category
@@ -390,26 +433,28 @@ block pagecontent
 					h3.plan__title.title.title_sm Ультима
 					.plan__price <span class="plan__money">₽29990</span> /месяц
 					ul.plan__list
-						li Все из тарифа “Бизнес”
-						li Мониторинг цен и динамики конкурентов
-						li Предоставляем рекомендации по&nbsp;росту продажи
+						li Аналитика заказов, продаж и чистой прибыли
+						li Планирование поставок на основные и региональные склады.
+						li Расчет % выкупа и стоимости логистики по товару/размеру
+						li Расчет чистой прибыли и маржинальности по товару
+						li и другие инструменты
 					a.plan__btn.btn.btn_purple.js-popup-open(href="#popup-contact" data-effect="mfp-zoom-in") Попробовать
 		.plan__circle.js-rellax(data-rellax-speed="-1")
 	.teams
 		.teams__center.center
 			.teams__head(data-aos="animation-scale-y")
 				.teams__stage.stage Отзывы
-				h2.teams__title.title Успешные продавцы регулярно отслеживают конкурентоспособность своих цен и&nbsp;ассортимента для роста продаж
+				h2.teams__title.title Успешные продавцы регулярно отслеживают метрики по своим товарам для роста продаж
 			.teams__body
 				.teams__col(data-aos="animation-scale-y")
-					h3.teams__title.title.title_sm Что профессионалы думают о Бустере?
+					h3.teams__title.title.title_sm Что профессионалы думают о MagnetX?
 				.teams__col
 					.teams__container
 						.teams__slider.js-teams-slider
 							.teams__slide(data-aos="animation-scale-y" data-aos-delay="200")
 								.teams__line(style="background-color: #004AFF;")
 								.teams__name(style="color: #004AFF;") ООО “Сурра”
-								.teams__text &quot; Выписывать цены конкурентов вручную по&nbsp;каждой позиции, когда у&nbsp;вас сотни товаров&nbsp;&mdash; просто нереально. Бустер экономит кучу времени &quot;
+								.teams__text &quot; Выписывать цены конкурентов вручную по&nbsp;каждой позиции, когда у&nbsp;вас сотни товаров&nbsp;&mdash; просто нереально. MagnetX экономит кучу времени &quot;
 								.teams__user
 									.teams__ava
 										img.teams__pic(src="img-2/valera.svg" alt="")
@@ -419,7 +464,7 @@ block pagecontent
 							.teams__slide(data-aos="animation-scale-y" data-aos-delay="400")
 								.teams__line(style="background-color: #96DDFF")
 								.teams__name(style="color: #96DDFF") Vata Home
-								.teams__text &quot; Выписывать цены конкурентов вручную по&nbsp;каждой позиции, когда у&nbsp;вас сотни товаров&nbsp;&mdash; просто нереально. Бустер экономит кучу времени &quot;
+								.teams__text &quot; Выписывать цены конкурентов вручную по&nbsp;каждой позиции, когда у&nbsp;вас сотни товаров&nbsp;&mdash; просто нереально. MagnetX экономит кучу времени &quot;
 								.teams__user
 									.teams__ava
 										img.teams__pic(src="img-2/valera.svg" alt="")
@@ -429,7 +474,7 @@ block pagecontent
 							.teams__slide
 								.teams__line(style="background-color: #96DDFF;")
 								.teams__name(style="color: #96DDFF;") Cossagach
-								.teams__text &quot; Выписывать цены конкурентов вручную по&nbsp;каждой позиции, когда у&nbsp;вас сотни товаров&nbsp;&mdash; просто нереально. Бустер экономит кучу времени &quot;
+								.teams__text &quot; Выписывать цены конкурентов вручную по&nbsp;каждой позиции, когда у&nbsp;вас сотни товаров&nbsp;&mdash; просто нереально. MagnetX экономит кучу времени &quot;
 								.teams__user
 									.teams__ava
 										img.teams__pic(src="img-2/valera.svg" alt="")
@@ -439,7 +484,7 @@ block pagecontent
 							.teams__slide
 								.teams__line(style="background-color: #004AFF;")
 								.teams__name(style="color: #004AFF;") Bento
-								.teams__text &quot; Выписывать цены конкурентов вручную по&nbsp;каждой позиции, когда у&nbsp;вас сотни товаров&nbsp;&mdash; просто нереально. Бустер экономит кучу времени &quot;
+								.teams__text &quot; Выписывать цены конкурентов вручную по&nbsp;каждой позиции, когда у&nbsp;вас сотни товаров&nbsp;&mdash; просто нереально. MagnetX экономит кучу времени &quot;
 								.teams__user
 									.teams__ava
 										img.teams__pic(src="img-2/valera.svg" alt="")
@@ -452,7 +497,7 @@ block pagecontent
 			.showcase__wrap
 				.showcase__top(data-aos="animation-scale-y")
 					.showcase__stage.stage Демо
-					h2.showcase__title.title <span class="title__color">Попробуйте Бустер в деле.</span>
+					h2.showcase__title.title <span class="title__color">Попробуйте MagnetX в деле.</span>
 				.showcase__info.info(data-aos="animation-scale-y" data-aos-delay="150") Каждую минуту вы недополучаете прибыль
 				.showcase__btn(data-aos="animation-scale-y" data-aos-delay="300")
 					button.btn.btn_purple Оставить заявку
@@ -543,43 +588,6 @@ block pagecontent
 					.demo__text Ready to revolutionize your design workflow? Try Collab for free for 30 days.
 					a.demo__btn.btn.btn_white.js-popup-open(href="#popup-contact" data-effect="mfp-zoom-in") Try free for 30 days
 		.demo__circle.js-rellax(data-rellax-speed="1")
-	//- .design
-		.design__center.center
-			.design__wrap(data-aos="animation-translate-y")
-				.design__stage.stage Design accordlogy
-				h2.design__title.title Enrich your design workflow<span class="title__color">.</span>
-				.design__info.info Design anything from simple icons to fully featured websites and applications.
-			.design__hand(data-aos data-aos-duration="600")
-				img.design__pic(src="img-2/hand-4.png" alt="")
-			.design__bg(data-aos data-aos-delay="400")
-				img.design__pic(src="img-2/design-pic.png" alt="")
-			.design__circles
-				.design__circle.js-rellax(data-rellax-speed="1")
-				.design__circle
-				.design__circle.js-rellax(data-rellax-speed=".5")
-			.design__body
-				a.design__scroll(href="#")
-					.design__icon
-						img.design__pic(src="img-2/scroll.svg" alt="")
-					.design__text Using Collab
-				.design__container
-					.design__slider.js-design-slider
-						mixin designSlide(src, category, info, text, delay)
-							.design__slide(data-aos="animation-translate-y" data-aos-delay=delay)
-								.design__view
-									.design__preview
-										img.design__pic(src=src alt="")
-								.design__details
-									.design__category=category
-									.design__info=info
-									.design__text=text
-									a.design__link(href="login.html") Get started
-										+i('arrow-right')
-						+designSlide('img-2/design-pic-1.png', 'Design', 'Automation Color Picker', 'Use the smart color picker to easily select and apply colors.', '0')
-						+designSlide('img-2/design-pic-2.png', 'Build', 'Component Builder Guide', 'Using the Component Builder with your projects.', '200')
-						+designSlide('img-2/design-pic-3.png', 'Ship', 'Cross-platform Deployment', 'Deploy your projects more efficiently for web & mobile.', '400')
-						+designSlide('img-2/design-pic-1.png', 'Design', 'Automation Color Picker', 'Use the smart color picker to easily select and apply colors.')
-						+designSlide('img-2/design-pic-2.png', 'Build', 'Component Builder Guide', 'Using the Component Builder with your projects.')
 	//- .details
 		.details__center.center
 			.details__head(data-aos="animation-scale-y")
@@ -802,7 +810,7 @@ block pagecontent
 			.footer__row
 				.footer__col
 					a.footer__logo(href="#")
-						img.footer__pic(src="img-2/logo-dark-new.svg" alt="")
+						img.footer__pic(src="img-2/logo-dark-new-magnetX.svg" alt="")
 				.footer__col
 					.footer__menu
 						a.footer__link(href="#") Возможности
