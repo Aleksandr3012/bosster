@@ -24,7 +24,7 @@
 =fd
   font-family: 'Montserrat', sans-serif
 =f
-  font-family: 'Poppins', sans-serif
+  // font-family: 'Poppins', sans-serif
 
 $bl: #000
 $dark: #292930
@@ -47,7 +47,7 @@ html
 
 body
   min-width: 375px
-  +f
+  +fd
   font-size: 16px
   line-height: 1.5 
   letter-spacing: -0.025em
@@ -552,10 +552,10 @@ body
   z-index: 2
   padding: 220px 0 100px
   +m
-    padding: 170px 0 35px  
+    padding: 100px 0 35px  
   &__wrap
     position: relative
-    z-index: 10
+    z-index: 3
     max-width: 440px
     +m
       max-width: 100% 
@@ -1262,7 +1262,7 @@ body
     padding: 0 210px 0 72px  
     background: $white
     border-radius: 20px  
-    +f
+    // +f
     font-size: 16px
     letter-spacing: -.025em 
     color: $dark
@@ -3149,6 +3149,9 @@ body
     border-radius: 24px
     +d
       padding: 40px 24px 
+    +t
+      height: auto
+      max-height: none
   &__category
     margin-bottom: 23px
     +fd
