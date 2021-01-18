@@ -803,7 +803,12 @@ body
   color: $white
   +m
     padding: 80px 0
+  .slick-track
+    display: flex
+    &::before, &::after
+      display: none
   .slick-slide
+    flex-shrink: 0
     height: inherit !important
   &__center
     position: relative
@@ -868,11 +873,9 @@ body
     &.slick-initialized
       visibility: visible
   &__slide
-    padding: 0 65px 
-    +d
-      padding: 0 55px
+    padding: 0 45px 
     +m
-      padding: 0 10px  
+      padding: 0 10px
     &:first-child,
     &:nth-child(3),
     &:nth-child(5)
