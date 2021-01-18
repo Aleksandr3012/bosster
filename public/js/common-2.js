@@ -23,7 +23,7 @@ if (isTouchDevice()) {
 // header
 (function () {
     var header = $('.js-header'),
-        burger = header.find('.js-header-burger'),
+        burger = header.find('.js-header-burger, .header__item'),
         wrap = header.find('.js-header-wrap'),
         bg = header.find('.js-header-bg'),
         items = header.find('.js-header-item'),

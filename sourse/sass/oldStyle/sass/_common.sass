@@ -66,7 +66,6 @@ body
   min-width: 178px
   height: 72px
   border-radius: 20px
-  +f
   font-size: 16px
   font-weight: 500 
   letter-spacing: -.04em
@@ -362,7 +361,7 @@ body
       border-right: 1px solid rgba($gray, .2) 
   &__category
     margin-bottom: 35px
-    +fd
+    
     font-size: 20px
     font-weight: 500 
     line-height: 1
@@ -440,7 +439,6 @@ body
     padding: 0 35px 0 15px
     border-radius: 5px
     box-shadow: 0 2px 5px rgba($dark, .1) 
-    +f
     font-size: 14px
     color: $dark
     +placeholder
@@ -468,7 +466,7 @@ body
 
 .title
   position: relative
-  +fd
+  
   font-size: 65px 
   font-weight: 500 
   line-height: 1
@@ -479,6 +477,7 @@ body
     font-size: 38px
   &__line
     position: relative
+    display: block
     &:before
       content: ""
       position: absolute 
@@ -540,7 +539,7 @@ body
     line-height: 1.5
 
 .stage
-  +fd
+  
   font-size: 20px
   font-weight: 700 
   line-height: 1
@@ -888,6 +887,8 @@ body
         left: -20px
         width: 160px
   &__details
+    display: flex
+    flex-direction: column
     position: relative
     padding-top: 115px
   &__preview
@@ -897,7 +898,7 @@ body
     width: 100% 
   &__category
     margin-bottom: 35px
-    +fd
+    
     font-size: 24px
     font-weight: 500
     line-height: 1.4
@@ -906,6 +907,7 @@ body
       margin-bottom: 24px
       font-size: 20px
   &__text
+    margin-top: auto
     margin-bottom: 40px
     color: rgba($white, .5) 
     +d
@@ -942,7 +944,7 @@ body
     display: flex
     justify-content: space-between
     width: 135px
-    +fd
+    
     font-size: 14px
     font-weight: 500
     +d
@@ -1241,7 +1243,7 @@ body
     margin: 0 auto
   &__info
     margin-bottom: 42px
-    +fd
+    
     font-weight: 500
     font-size: 24px
     line-height: 1.4
@@ -1262,7 +1264,6 @@ body
     padding: 0 210px 0 72px  
     background: $white
     border-radius: 20px  
-    // +f
     font-size: 16px
     letter-spacing: -.025em 
     color: $dark
@@ -1328,7 +1329,7 @@ body
   &__item
     display: flex
     align-items: center
-    +fd
+    
     font-size: 18px
     font-weight: 500
     line-height: 1.1 
@@ -2266,7 +2267,7 @@ body
       margin-bottom: 32px
   &__name
     margin-bottom: 27px
-    +fd
+    
     font-size: 20px
     font-weight: 700
     +d
@@ -2276,7 +2277,7 @@ body
   &__text
     max-width: 290px
     margin-bottom: 40px
-    +fd
+    
     font-size: 24px
     letter-spacing: -.025em 
     line-height: 1.25
@@ -2391,7 +2392,7 @@ body
     +d
       max-width: 275px
   &__number
-    +fd
+    
     font-size: 80px
     line-height: 1
     font-weight: 500
@@ -2646,7 +2647,7 @@ body
     display: flex
     align-items: center
     margin-bottom: 6px
-    +fd
+    
     font-size: 14px
     font-weight: 500 
   &__category &__icon
@@ -2675,7 +2676,7 @@ body
     display: flex
     align-items: center
     padding-right: 30px
-    +fd
+    
     font-size: 18px
     font-weight: 500
     color: $dark
@@ -2840,14 +2841,14 @@ body
       margin-bottom: 58px
   &__icon
     margin-bottom: 22px
-    +fd
+    
     font-size: 48px
     font-weight: 500 
     line-height: (62/48)
   &__info
     max-width: 450px
     margin: 0 auto
-    +fd
+    
     font-size: 24px
     line-height: 1.4
     letter-spacing: -.045em 
@@ -2914,7 +2915,7 @@ body
   &__text
     flex-grow: 1
     margin-bottom: 112px
-    +fd
+    
     font-size: 24px
     font-weight: 500 
     line-height: 1.4
@@ -3141,7 +3142,7 @@ body
       margin-bottom: 34px
   &__details
     height: 100%
-    max-height: 355px
+    max-height: 382px
     display: flex
     flex-direction: column
     padding: 40px 30px
@@ -3154,7 +3155,7 @@ body
       max-height: none
   &__category
     margin-bottom: 23px
-    +fd
+    
     font-size: 14px
     line-height: 1
     font-weight: 500 
@@ -3162,7 +3163,7 @@ body
       margin-bottom: 16px
   &__slide &__info
     margin-bottom: 23px
-    +fd
+    
     font-size: 32px
     font-weight: 500
     line-height: 1.1
@@ -3177,6 +3178,7 @@ body
       font-size: 24px
   &__text
     color: $gray
+    padding-bottom: 20px
     +d
       // max-width: 180px
     +m
@@ -3188,15 +3190,15 @@ body
     margin-top: auto
     display: inline-flex
     align-items: center
-    margin-top: 26px
-    +fd
+    // margin-top: 26px
+    
     font-size: 18px
     font-weight: 500
     line-height: 1.1
     letter-spacing: -.045em 
     color: $bg-dark
     +d
-      margin-top: 20px
+      // margin-top: 20px
     .icon
       margin-top: -2px
       margin-left: 16px
@@ -3349,7 +3351,7 @@ body
       padding: 0 0 0 70px  
   &__counter
     margin-bottom: 40px
-    +fd
+    
     font-size: 80px
     font-weight: 500
     line-height: 1
@@ -3358,7 +3360,6 @@ body
       font-size: 68px
   &__number
     pointer-events: none
-    +f
     font-size: 288px
     font-weight: 300 
     letter-spacing: -.09em
@@ -3381,7 +3382,6 @@ body
     margin-right: 47px
     border-radius: 50%
     background: $purple   
-    +f
     font-size: 16px
     font-weight: 500
     letter-spacing: -.04em  
@@ -3576,7 +3576,6 @@ body
     border: none 
     border-radius: 8px
     background: #E3E6E9 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='9' fill='none'%3E%3Cpath fill-rule='evenodd' d='M.293.293a1 1 0 0 1 1.414 0L7.5 6.086 13.293.293a1 1 0 0 1 1.414 0 1 1 0 0 1 0 1.414l-6.5 6.5a1 1 0 0 1-1.414 0l-6.5-6.5a1 1 0 0 1 0-1.414z' fill='%23292930'/%3E%3C/svg%3E") no-repeat calc(100% - 15px) 50% / 15px auto
-    +f
     font-size: 12px
     color: $dark
     +m
@@ -3833,7 +3832,7 @@ body
     align-items: center
     padding: 16px 80px 16px 24px
     border-radius: 16px 
-    +fd
+    
     font-size: 18px
     font-weight: 500
     line-height: 1.1
@@ -4194,7 +4193,7 @@ body
       padding: 140px 0 0 
   &__category
     margin-bottom: 24px
-    +fd
+    
     font-size: 24px
     font-weight: 500
   &__text
@@ -4626,7 +4625,7 @@ body
     font-size: 0
   &__copyright
     margin-right: auto
-    +fd
+    
     font-size: 14px
     font-weight: 500
     color: $gray  
@@ -4634,7 +4633,7 @@ body
     display: flex
     align-items: center
     margin-left: auto
-    +fd
+    
     font-size: 14px
     font-weight: 500
     color: $gray 
@@ -4942,7 +4941,7 @@ body
 .field
   &__label
     text-align: left
-    +fd
+    
     font-size: 14px
     font-weight: 500
     line-height: 1
@@ -4969,7 +4968,6 @@ body
     width: 100%
     border: 1px solid #E3E6E9  
     border-radius: 16px 
-    +f
     font-size: 16px
     color: $dark
     transition: all .25s 
