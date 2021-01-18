@@ -58,6 +58,8 @@ body
     font-size: 15px
   &.no-scroll
     overflow: hidden
+  &::selection
+    background: $gray
 
 .page
   overflow: hidden
@@ -784,7 +786,7 @@ body
         right: calc(50% - 1300px)
       +t
         top: 116px
-        right: -85px
+        right: -120px
         width: 170px
         height: 170px
     &:nth-child(7)
@@ -902,7 +904,7 @@ body
     width: 100% 
   &__category
     margin-bottom: 35px
-    
+    flex-grow: 1
     font-size: 24px
     font-weight: 500
     line-height: 1.4
@@ -911,9 +913,11 @@ body
       margin-bottom: 24px
       font-size: 20px
   &__text
-    margin-top: auto
+    flex-grow: 1
     margin-bottom: 40px
     color: rgba($white, .5) 
+    // +t
+      // margin-top: 0
     +d
       margin-bottom: 32px
       font-size: 15px
@@ -1905,8 +1909,8 @@ body
     margin-bottom: 190px
   +t
     padding-top: 100px
-  +m
     height: 897px
+  +m
     margin-bottom: 295px
     padding-top: 80px
   &__head
@@ -1917,7 +1921,7 @@ body
     margin-bottom: 16px
     color: $purple
   &__title
-    font-size: 144px
+    font-size: 140px
     font-weight: 700
     color: $white
     +d
@@ -2137,7 +2141,7 @@ body
     z-index: 5
     &:first-child
       left: calc(50% - 827px)
-      bottom: -421px 
+      bottom: -381px 
       width: 662px
       +rmin(1600)
         left: 0
@@ -2159,11 +2163,11 @@ body
       &[data-aos]
         transform: translate(-100px,100px) rotate(-30deg)
     &:nth-child(2)
-      right: calc(50% - 813px)
-      bottom: -600px 
+      right: calc(50% - 880px)
+      bottom: -850px 
       width: 524px
       +rmin(1600)
-        right: 0
+        right: -100px
       +d
         right: calc(50% - 600px)
         bottom: -340px 
@@ -2245,6 +2249,8 @@ body
     +d
       max-width: 375px
       font-size: 40px
+    +t
+      font-size: 35px
   &__container
     margin: 0 -20px
     +m
@@ -2956,6 +2962,8 @@ body
   position: relative
   padding-top: 260px
   // margin-bottom: 110px
+  +t
+    padding-top: 150px
   +m
     padding-top: 130px
     // margin-bottom: 80px
@@ -2964,10 +2972,14 @@ body
     margin-bottom: 108px
     +d
       margin-bottom: 155px
+      max-width: 380px
     +t
+      max-width: 400px
       margin-bottom: 90px
     +m
       margin-bottom: 42px
+    +a
+      max-width: 300px
   &__stage
     margin-bottom: 24px
     color: $purple
@@ -3001,7 +3013,7 @@ body
     +d
       right: calc(50% - 725px)
     +t
-      top: 0px
+      top: 150px
       right: -100px
       width: 400px
     +m
@@ -3020,6 +3032,7 @@ body
     +d
       right: calc(50% - 260px)
     +t
+      top: 150px
       right: 180px
       width: 200px
     +m
