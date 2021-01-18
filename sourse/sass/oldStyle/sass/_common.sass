@@ -905,6 +905,8 @@ body
   &__category
     margin-bottom: 35px
     flex-grow: 1
+    +t
+      flex-grow: 0
     font-size: 24px
     font-weight: 500
     line-height: 1.4
@@ -914,6 +916,8 @@ body
       font-size: 20px
   &__text
     flex-grow: 1
+    +t
+      flex-grow: 0
     margin-bottom: 40px
     color: rgba($white, .5) 
     // +t
@@ -2067,6 +2071,7 @@ body
         width: 14px
         height: 14px
     &:nth-child(3)
+      display: none !important
       left: calc(50% - 322px)
       bottom: 221px
       width: 95px
